@@ -1,0 +1,8 @@
+com/mycompany/pametnakucaservis/resources/PlanerAPI.class
+com/mycompany/pametnakucaservis/resources/AlarmAPI.class
+com/mycompany/pametnakucaservis/resources/APIHelper.class
+filters/BasicAuthFilter.class
+entities/User.class
+entities/Alarm.class
+entities/Song.class
+com/mycompany/pametnakucaservis/JAXRSConfiguration.class

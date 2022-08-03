@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <!-- Define Persistence Unit -->
+  <persistence-unit name="PametnaKucaServisPU" transaction-type="JTA">
+    <class>entities.Activity</class>
+    <class>entities.Alarm</class>
+    <class>entities.OldAlarm</class>
+    <class>entities.Song</class>
+    <class>entities.User</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <jta-data-source>pametna_kuca_resource</jta-data-source>
+  </persistence-unit>
+  <persistence-unit name="PametnaKucaServisPU_2" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>entities.ListenedSong</class>
+    <class>entities.Song</class>
+    <class>entities.User</class>
+    <class>entities.Alarm</class>
+    <class>entities.OldAlarm</class>
+    <class>entities.Activity</class>
+    <class>entities.join_table</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/pametna_kuca?zeroDateTimeBehavior=CONVERT_TO_NULL&amp;allowPublicKeyRetrieval=true&amp;useSSL=false"/>
+      <property name="javax.persistence.jdbc.user" value="user2"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="1vl7php"/>
+    </properties>
+  </persistence-unit>
+  
+</persistence>
